@@ -1,10 +1,11 @@
 "use client";
+import { cls } from "@/libs/utils";
 import React, { useState } from "react";
 import { FaGit, FaGithub, FaTwitter } from "react-icons/fa";
 
-function cls(...classnames: string[]) {
-  return classnames.join(" ");
-}
+// function cls(...classnames: string[]) {
+//   return classnames.join(" ");
+// }
 
 export default function Login() {
   const [method, setMethod] = useState<"email" | "phone">("email");
