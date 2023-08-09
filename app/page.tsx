@@ -1,43 +1,15 @@
 import Layout from "@/components/layout";
+import Link from "next/link";
 import { FaComment, FaHeart, FaPlus, FaPlusCircle } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <Layout title="Home" hasTabBar>
-      <div className="flex flex-col space-y-5 py-10">
-        {Array(7)
-          .fill(1)
-          .map((_, i) => (
-            <div
-              key={i}
-              className="flex border-b pb-4 px-4 cursor-pointer justify-between"
-            >
-              <div className="flex space-x-4">
-                <div className="w-20 h-20 bg-gray-400 rounded-md" />
-                <div className="pt-2 flex flex-col">
-                  <h3 className="text-sm font-medium text-gray-900">
-                    New iPhone 14
-                  </h3>
-                  <span className="text-xs text-gray-500">Black</span>
-                  <span className="font-medium mt-1 text-gray-900">$95</span>
-                </div>
-              </div>
-              <div className="flex items-end justify-end space-x-1.5">
-                <div className="flex items-center text-sm text-gray-600 space-x-0.5">
-                  <FaHeart />
-                  <span>1</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-600 space-x-0.5">
-                  <FaComment />
-                  <span>1</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        <button className="fixed hover:bg-orange-500 transition cursor-pointer bottom-24 right-5 bg-orange-400 rounded-full p-4 shadow-xl text-white">
-          <FaPlus />
+    <Link href="/items">
+      <div className="flex h-screen w-full justify-center items-center">
+        <button className="mt-4 mx-auto w-1/2 bg-orange-500 hover:bg-orange-600 text-white py-6 border border-transparent rounded-3xl shadow-sm text-3xl font-medium focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none">
+          Start
         </button>
       </div>
-    </Layout>
+    </Link>
   );
 }

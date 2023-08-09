@@ -1,7 +1,7 @@
 "use client";
 import { cls } from "@/libs/utils";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   BsArrowBarLeft,
   BsBroadcast,
@@ -28,6 +28,7 @@ export default function Layout({
   children,
 }: LayoutProps) {
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div>
@@ -48,31 +49,56 @@ export default function Layout({
       {hasTabBar ? (
         <nav className="bg-white w-full text-sm py-3  fixed text-gray-800 border-t bottom-0  items-center max-w-xl grid grid-cols-5">
           <Link href="/items">
-            <div className="flex flex-col items-center space-y-2">
+            <div
+              className={cls(
+                "flex flex-col items-center space-y-2",
+                pathname === "/items" ? "text-orange-500" : ""
+              )}
+            >
               <BsHouse />
               <span>Home</span>
             </div>
           </Link>
           <Link href="/community">
-            <div className="flex flex-col items-center space-y-2">
+            <div
+              className={cls(
+                "flex flex-col items-center space-y-2",
+                pathname === "/community" ? "text-orange-500" : ""
+              )}
+            >
               <BsNewspaper />
               <span>Community</span>
             </div>
           </Link>
           <Link href="/chats">
-            <div className="flex flex-col items-center space-y-2">
+            <div
+              className={cls(
+                "flex flex-col items-center space-y-2",
+                pathname === "/chats" ? "text-orange-500" : ""
+              )}
+            >
               <BsChat />
               <span>Chat</span>
             </div>
           </Link>
           <Link href="/live">
-            <div className="flex flex-col items-center space-y-2">
+            <div
+              className={cls(
+                "flex flex-col items-center space-y-2",
+                pathname === "/live" ? "text-orange-500" : ""
+              )}
+            >
               <BsBroadcast />
               <span>Live</span>
             </div>
           </Link>
           <Link href="/profile">
-            <div className="flex flex-col items-center space-y-2">
+            <div
+              className={cls(
+                "flex flex-col items-center space-y-2",
+                pathname === "/profile" ? "text-orange-500" : ""
+              )}
+            >
               <BsPerson />
               <span>Profile</span>
             </div>

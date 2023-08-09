@@ -14,7 +14,7 @@ export default function Chats() {
               <div className="w-12 h-12 rounded-full bg-slate-300" />
               <div>
                 <p className=" text-gray-700">Steve Jebs</p>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 pb-4">
                   See you tomorrow in the corner at 2pm!
                 </p>
               </div>
