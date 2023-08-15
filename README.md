@@ -11,3 +11,10 @@ scheme.prisma
 
 > front에서는 client 이용불가 : 보안 이슈
 > nextjs의 api를 이용
+
+Error
+
+```
+Unhandled Runtime Error
+TypeError: __webpack_require__.n is not a function. (In '__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__)', '__webpack_require__.n' is undefined)
+```
